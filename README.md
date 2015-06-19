@@ -3,6 +3,16 @@
 This is a custom implementation of tradicional HTML radioboxes.
 Its implementation includes data attributes manipulation and uses Bridger.JS with jQuery wrapper as DOM Manipulation Library wrapper.
 
+## Install
+
+You can install using Bower:
+
+```javascript
+bower install custom-radiobox
+```
+
+Or by using the distribution file at:  dist/custom.radiobox.js
+
 ## How it works?
 
 A functional example can be found at examples folder. But consider the following HTML:
@@ -67,6 +77,14 @@ To retrieve, do the following: (using jQuery/Sizzle/Zepto sintax)
 
 ```javascript
 $(".myradiobox").data('value')
+```
+
+## Running tests
+
+The custom.radiobox is tested under Jasmine via Grunt (PhantomJS).
+
+```
+grunt jasmine
 ```
 
 ## How to contribute?

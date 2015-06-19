@@ -1,7 +1,8 @@
 (function(window, document, undefined) {
-  var $b = new Bridge_jQuery(jQuery);
+  $b = new Bridger_jQuery(jQuery);
   var CustomRadiobox = function() {
     var init = function() {
+
       var radiogroups = $b('[data-radiogroup]');
 
       radiogroups.each(function(i, radiogroup) {

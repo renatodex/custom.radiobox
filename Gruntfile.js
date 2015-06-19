@@ -8,7 +8,7 @@ module.exports = function(grunt) {
           compress: true
         },
         files: {
-          'dist/bridger.min.js': 'src/bridger.js'
+          'dist/custom.radiobox.min.js': 'src/custom.radiobox.js'
         }
       }
     },
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
           vendor: [
             "bower_components/jquery/dist/jquery.js",
             "bower_components/jasmine-jquery/lib/jasmine-jquery.js",
-            "bower_components/bridger/dist/bridger.min.js",
+            "bower_components/bridger/dist/bridger.js",
           ]
         },
       }

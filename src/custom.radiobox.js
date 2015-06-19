@@ -5,25 +5,32 @@
       var radiogroups = $b('[data-radiogroup]');
 
       radiogroups.each(function(i, radiogroup) {
-        var radiogroup_options = $(radiogroup).children();
+        var radiogroup_options = $b(radiogroup).children();
 
         $b(radiogroup_options).each(function(j, op) {
           var unique_id = ['radiogroup_',j].join('');
           var input = $b("<input/>")
             .attr('type', 'radio')
             .attr('id', unique_id)
-            .attr('name', unique_id)
-            .attr('value', $b(op).data('value'))
-            .css('display', 'none');
+            .attr('name', $b(radiogroups).data('radiogroup'))
+            .attr('value', $b(op).data('value'));
 
-          console.log($b(op).data)
-          // console.log($(input).attr('value'));
+          // Sync elements
+          input.data('nexus', $b(op));
+          $b(op).data('nexus', input);
 
-          // console.log(radiogroup.attr('class'));
-          $(input).before($(radiogroup));
-          // $(input).appendTo("body");
+          $b(radiogroup).after(input);
         });
       });
+
+      $b("[data-radiogroup] li").bind("click", function(e) {
+        var value = $b(e.target).data('value');
+        var radiogroup = $(e.target).parent();
+        var nexus = $(e.target).data('nexus');
+
+        $b(radiogroup).data('value', value);
+        nexus.trigger('click');
+      })
     }
 
     init();

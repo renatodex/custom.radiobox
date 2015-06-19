@@ -2,15 +2,25 @@
   <head></head>
   <body>
 
+    <style>
+      .is-selected{
+        border: 1px solid red;
+      }
+    </style>
+
     <h1>This is custom.radiobox working</h1>
 
-    <div class="some-form">
-      <ul class="myradiobox" data-radiogroup="options">
-        <li data-value="a">Option 1</li>
-        <li data-value="b">Option 2</li>
-        <li data-value="c">Option 3</li>
-      </ul>
-    </div>
+    <form method="GET">
+      <div class="some-form">
+        <ul class="myradiobox" data-radiogroup="options">
+          <li data-value="a">Option 1</li>
+          <li data-value="b">Option 2</li>
+          <li data-value="c">Option 3</li>
+        </ul>
+      </div>
+
+      <input type="submit" value="enviar"></input>
+    </form>
 
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/bridger/dist/bridger.min.js"></script>

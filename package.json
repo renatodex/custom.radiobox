@@ -1,0 +1,27 @@
+{
+  "name": "custom.radiobox",
+  "version": "1.0.0",
+  "description": "A custom radiobox implementation to replace HTML radiobox",
+  "main": "Gruntfile.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "grunt jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/renatodex/custom.radiobox"
+  },
+  "author": "Renato Alves (@renatodex)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renatodex/custom.radiobox/issues"
+  },
+  "homepage": "https://github.com/renatodex/custom.radiobox",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jasmine": "^0.8.2",
+    "grunt-contrib-uglify": "^0.9.1"
+  }
+}

@@ -6,7 +6,7 @@
     "Renato Alves <renatodex@gmail.com>"
   ],
   "description": "A custom radiobox implementation to replace default HTML radiobox",
-  "main": "dist/custom.radiobox.min.js",
+  "main": "dist/custom.radiobox.js",
   "keywords": [
     "radiobox",
     "widget"

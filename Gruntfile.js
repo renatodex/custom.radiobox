@@ -16,14 +16,16 @@ module.exports = function(grunt) {
       pivotal: {
         src: 'src/**/*.js',
         options: {
+          keepRunner: true,
+          outfile:'_SpecRunner.html',
           specs: 'spec/*spec.js',
           helpers: 'spec/*helper.js',
           vendor: [
             "bower_components/jquery/dist/jquery.js",
-            "bower_components/bridger/dist/bridger.min.js",
             "bower_components/jasmine-jquery/lib/jasmine-jquery.js",
+            "bower_components/bridger/dist/bridger.min.js",
           ]
-        }
+        },
       }
     }
   });

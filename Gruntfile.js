@@ -35,6 +35,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Task defining.
-  grunt.registerTask('default', 'jasmine');
+  grunt.registerTask('default', ['uglify','jasmine']);
   grunt.registerTask('build', ['uglify']);
 };

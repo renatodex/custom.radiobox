@@ -1,5 +1,5 @@
 (function(window, document, undefined) {
-  $b = new Bridger_jQuery(jQuery);
+  $b = Bridger.autoload('jQuery');
   var CustomRadiobox = function() {
     var init = function() {
 

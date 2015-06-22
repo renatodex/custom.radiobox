@@ -31,9 +31,13 @@
         var nexus = $b(e.target).data('nexus');
 
         $b(radiogroup).data('value', value);
+        $b(radiogroup).data('selected_value', value);
+        $b(radiogroup).data('selected_element', $b(e.target));
         nexus.trigger('click');
         $b(e.target).parent().find('li').removeClass('is-selected');
         $b(e.target).addClass('is-selected');
+
+        $b(e.target).parent().trigger('change');
       })
     }
 

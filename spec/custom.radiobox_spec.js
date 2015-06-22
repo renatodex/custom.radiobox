@@ -21,6 +21,13 @@ describe("custom radiobox", function() {
     var option1 = $(".myradiobox").children().first();
     option1.trigger('click');
     expect($(".myradiobox").data('value')).toEqual('a');
+    expect($(".myradiobox").data('selected_value')).toEqual('a');
+  });
+
+  it("should store selected element at radiogroup level", function() {
+      var option1 = $(".myradiobox").children().first();
+      option1.trigger('click');
+      expect($(".myradiobox").data('selected_element')).toEqual(option1);
   });
 
   it("should select nexus input when option is clicked", function() {
@@ -58,5 +65,14 @@ describe("custom radiobox", function() {
     expect(radiobox2_option1).not.toHaveClass("is-selected");
     expect(radiobox1_option1).toHaveClass("is-selected");
     expect($(radiobox1_option1).data("nexus").attr("id")).not.toEqual($(radiobox2_option1).data("nexus").attr("id"));
+  });
+
+  it("should trigger event change", function() {
+    var spy = spyOnEvent('.myradiobox', 'change');
+
+    var option1 = $(".myradiobox").children().first();
+    option1.trigger('click');
+
+    expect(spy).toHaveBeenTriggered();
   });
 });
